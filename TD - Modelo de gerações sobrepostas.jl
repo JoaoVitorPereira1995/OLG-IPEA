@@ -233,17 +233,6 @@ best_sigma2 = params.sigma2
 # 4.2. Evitar inconsistências com variáveis aleatórias
 # =============================================================================
 
-"""
-Nota: A primeira versão não separava a seção #4 em duas. Mas por algum motivo, existia uma inconsistência nas variáveis aleatórias.
-Mesmo mantendo a seed igual, o comando gerava matrizes diferentes e eu nunca entendi bem o motivo.
-
-A saída para isso foi dividir o script em duas partes: 
-    4.1 faz o loop com todas as variáveis; 
-    4.2 usa as variâncias encontradas na anterior, define as variáveis aleatórias a priori e refaz o loop;
-
-Com isso, a inconsistência foi resolvida sem prejuízos maiores ao código.
-
-"""
 σ₁ = best_sigma1
 σ₂ = best_sigma2
 
@@ -599,6 +588,7 @@ end
 xlabel!("Período da simulação")
 ylabel!("P90/P10")
 savefig(joinpath(output_dir, "comparacao_p90/p10_taus.png"))
+
 
 
 
