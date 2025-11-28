@@ -323,7 +323,7 @@ end
 # 5. Fase de Treino: Rodar até encontrar os momentos-alvo
 # =============================================================================
 
-params = deserialize("C:/Users/joaov/Documents/UFPR/Doutorado/Tese/Computação/Julia/resultados/best_params_teste__2moments_final.jld")
+params = deserialize("C:/caminho/resultados/best_params_teste__2moments_final.jld")
 
 β = params.beta
 ρ = params.rho
@@ -482,7 +482,7 @@ end
 # 7. Pós-Simulação: Plotar e Analisar os Resultados
 # =============================================================================
 
-output_dir =  "C:/Users/joaov/Documents/UFPR/Doutorado/Tese/Computação/resultados/Figuras/"
+output_dir =  "C:/caminho/resultados/Figuras/"
 
 plot_range = warmup_period:(T_total - 1)
 sim_range = 1:T_sim
@@ -588,6 +588,7 @@ end
 xlabel!("Período da simulação")
 ylabel!("P90/P10")
 savefig(joinpath(output_dir, "comparacao_p90/p10_taus.png"))
+
 
 
 
